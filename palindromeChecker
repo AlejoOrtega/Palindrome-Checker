@@ -1,0 +1,13 @@
+function palindrome(str) {
+  // 1) Lowercase the input to avoid error to do capitalization
+  // 2) Strip out non-alphanumeric characters
+  const alphanumericOnly = str.toLowerCase().match(/[a-z0-9]/g);
+  
+  //Explanation of Regex [a-z0-9] only takes alphanumeric characters
+
+  // 3) palindrome validation
+    return alphanumericOnly.join('') ===
+        alphanumericOnly.reverse().join('');
+}
+
+palindrome("eye");
